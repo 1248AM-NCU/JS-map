@@ -3,15 +3,16 @@
     <h1 id="header"> Find-a-Place</h1>
     <h2>Placeholder</h2>
     <label for="destination">I want to go to a</label>
-    <select id="select-type" name="destination">
+    <select id="select-type" name="destination" onchange="changedType()">
+        <option value="none" selected disabled hidden>Choose type</option>
         <option value="cafe">Cafe</option>
         <option value="restaurant">Restaurant</option>
-        <option value="hotel">Hotel</option>
+        <option value="hotel" selected>Hotel</option>
         <option value="market">Market</option>
     </select>
+    <div>
     <p>Choose a location on the map</p>
-    <div id="map">
-
+    <div id="map"></div>
     </div>
 
 </body>

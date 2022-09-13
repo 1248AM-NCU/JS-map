@@ -6,9 +6,10 @@ datalist{
 }
 h1, h2{
     text-align: center;
-    text-shadow: 2px 2px 4px #0006;
+    text-shadow: 3px 3px 4px #0007;
 }
 h1{ font-size: 80px; margin: 1%;}
+h1 span {display: inline-block; transform: translate(0px 0px);}
 * {
     text-align: center;
     color: white;
@@ -24,10 +25,11 @@ body{
     animation: rainbow 0.5s linear;
 }
 @keyframes rainbow {
-    0%{color:hsl(0turn 0% 100%)}
+    0%{color:hsl(0turn 0% 100%); transform: translate(0%, 0%);}
     20%{color:hsl(0.2turn 100% 50%)}
     40%{color:hsl(0.4turn 100% 50%)}
+    50%{color:hsl(0.5turn 100% 50%); transform: translate(-15px, -15px); text-shadow: 18px 18px 8px #0004;}
     60%{color:hsl(0.6turn 100% 50%)}
     80%{color:hsl(0.8turn 100% 50%)}
-    100%{color:hsl(1turn 0% 100%)}
+    100%{color:hsl(1turn 0% 100%); transform: translate(0%, 0%);}
 }
