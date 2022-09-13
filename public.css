@@ -19,6 +19,7 @@ select {
 body{
     background-color: rgb(120, 122, 233);
 }
+#map { height: 580px; }
 .rainbow{
     animation: rainbow 0.5s linear;
 }
