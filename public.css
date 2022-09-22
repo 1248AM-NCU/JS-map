@@ -6,7 +6,7 @@ datalist{
 }
 h1, h2{
     text-align: center;
-    text-shadow: 3px 3px 4px #0007;
+    text-shadow: 3px 3px 3px #0007;
 }
 h1{ font-size: 80px; margin: 1%;}
 h1 span {display: inline-block; transform: translate(0px 0px);}
@@ -14,15 +14,54 @@ h1 span {display: inline-block; transform: translate(0px 0px);}
     text-align: center;
     color: white;
 }
+
 select {
-    background-color: rgb(140,102, 233);
+    background-color: rgb(140,102, 233); border: 0px; border-radius: 5px;
+    box-shadow: 2px 2px 0px rgb(101, 102, 175);
 }
 body{
-    background-color: rgb(120, 122, 233);
+    background-color: rgb(120, 122, 233); margin: 0px;
 }
-#map { height: 580px; }
+.anim-map {
+    animation: anim-map 1s forwards;
+}
+#map {  height: 600px; background-color: rgb(140,102, 233); }
+
+/*Reset colors for map because of the rule up there*/
+#map * { color:black;  }
+#map-container{ 
+    position:relative; 
+    background-color: rgb(140,102, 233); 
+    padding: 30px; 
+    border-radius: 30px; 
+    margin: 20px;
+    padding-top: 10px;
+    box-shadow: 10px 10px 0px rgb(101, 102, 175);
+}
+#info *
+{
+    font-size: x-large;
+    color:white
+}
+#info {
+    background-color: rgb(117, 69, 194);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgb(101, 102, 175);
+    display: none;
+}
+#get-dir{
+    background-color: rgb(143, 115, 189);
+    border: 0px; border-radius: 5px;
+    box-shadow: 4px 4px 0px rgb(101, 102, 175);
+    padding: 1% 2%;
+}
 .rainbow{
-    animation: rainbow 0.5s linear;
+    animation: rainbow 0.5s ease-in-out;
+}
+.tt-style{
+    color:black
 }
 @keyframes rainbow {
     0%{color:hsl(0turn 0% 100%); transform: translate(0%, 0%);}
@@ -32,4 +71,8 @@ body{
     60%{color:hsl(0.6turn 100% 50%)}
     80%{color:hsl(0.8turn 100% 50%)}
     100%{color:hsl(1turn 0% 100%); transform: translate(0%, 0%);}
+}
+@keyframes anim-map {
+    to {width: 100%; height: 600px; display: block;}
+    from {width: 0%; height: 0px; display: block;}
 }

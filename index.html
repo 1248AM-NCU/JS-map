@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <body>
     <h1 id="header"> Find-a-Place</h1>
-    <h2>Placeholder</h2>
     <label for="destination">I want to go to a</label>
     <select id="select-type" name="destination" onchange="changedType()">
         <option value="none" selected disabled hidden>Choose type</option>
@@ -10,9 +9,15 @@
         <option value="hotel" selected>Hotel</option>
         <option value="market">Market</option>
     </select>
-    <div>
-    <p>Choose a location on the map</p>
-    <div id="map"></div>
+    <div id="map-container">
+        <h2>Choose a location on the map</h2>
+        <div id="map"></div>
+    </div>
+    <div id="info">
+        <p id="name">Name</p>
+        <p id="addr">Test Street</p>
+        <p id="distance">1000km</p>
+        <button id="get-dir" onclick="">Get Directions</button>
     </div>
 
 </body>
